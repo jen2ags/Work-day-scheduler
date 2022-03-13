@@ -3,7 +3,7 @@ var currentDayDisplay = moment().format('MMMM Do YYYY, h:mm:ss a');
 var hourDisplay = $('.hour').valueOf();
 var saveButtonEl =$('.saveBtn');
 var eventTask = $('.task');
-var storedTask = localStorage.getItem('.task')
+
 
 
 
@@ -32,15 +32,18 @@ $('.description').each(function() {
     else if (dataTime > hours) { 
         timeBlock.addClass('future');
     }
-});
-
-//if (storedTask) {
-    //taskText.textContent = 
+}); 
 
 function store() {
-    var taskText = $(".task");
-    localStorage.setItem(".task", taskText.textContent);
+    var value = $(this).siblings('.description').val();
+        var time = $(this).siblings('.description').attr('data-time');
+        localStorage.setItem(time, value);
 
 }
 
 saveButtonEl.on('click', store);
+
+function getStoredItem () {
+    var storedTask = localStorage.getItem(time);
+    $('.description').innerHTML = storedTask;
+}
