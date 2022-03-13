@@ -14,7 +14,7 @@ var currentDayEl = document.createElement('p');
     currentDay.append(currentDayDisplay);
 
 //display the color based on past, present or future    
-function colorDisplay() {
+$('.time-block').each(function() {
     var timeBlock = $('time-block');
     console.log(hourDisplay);
     
@@ -28,9 +28,9 @@ function colorDisplay() {
     else if(hourDisplay.value > hours) { 
         timeBlock.classList.add('future');
     }
-}
+});
 
-colorDisplay();    
+ 
 
 saveButtonEl.on('click', function(event) {
     event.preventDefault();
