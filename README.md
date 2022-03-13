@@ -14,7 +14,7 @@ To provide a scheduler for the work day. The user will be able to input tasks to
 https://jen2ags.github.io/Work-day-scheduler/
 
 ## Screen Shot
-![Screenshot Work day Scheduler](assets\images\scheduler-preview.png)
+![Screenshot Work day Scheduler](https://github.com/jen2ags/Work-day-scheduler/blob/main/assets/images/scheduler-preview.png)
 
 
 ## Contribution
