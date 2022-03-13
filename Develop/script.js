@@ -2,8 +2,8 @@ var currentDay = $('#currentDay');
 var currentDayDisplay = moment().format('MMMM Do YYYY, h:mm:ss a');
 var hourDisplay = $('.hour').valueOf();
 var saveButtonEl =$('.saveBtn');
-var eventDescription = $('.description');
-
+var eventTask = $('.task');
+var storedTask = localStorage.getItem('.task')
 
 
 
@@ -34,18 +34,13 @@ $('.description').each(function() {
     }
 });
 
- 
+//if (storedTask) {
+    //taskText.textContent = 
 
-//saveButtonEl.on('click', function(event) {
-  //  event.preventDefault();
-//});   
-  // create user object from input
-  //var taskText = {
-    //taskText: eventDescription.value.trim(),
-    
-  //};
+function store() {
+    var taskText = $(".task");
+    localStorage.setItem(".task", taskText.textContent);
 
-  // set new submission to local storage 
-  //localStorage.setItem("taskText", JSON.stringify(taskText));
-  
+}
 
+saveButtonEl.on('click', store);
