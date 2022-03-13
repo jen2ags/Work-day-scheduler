@@ -13,13 +13,14 @@ var currentDayEl = document.createElement('p');
     currentDay.append(currentDayDisplay);
 
 //display the color based on past, present or future    
-$('.time-block').each(function() {
+$('.description').each(function() {
     var timeBlock = $(this);
-    var dataTime =$(this).attr("data-time");
-    console.log(dataTime);
+    var dataTime =parseInt($(this).attr("data-time"));
+
+    
 
     var hours = moment().hours();
-   
+    console.log(dataTime, hours);
     
     if (dataTime === hours) {
         timeBlock.addClass('present');
