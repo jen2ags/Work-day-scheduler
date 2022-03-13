@@ -1,4 +1,4 @@
-var currentDay = $('currentDay');
+var currentDay = $('#currentDay');
 var currentDayDisplay = moment().format('MMMM Do YYYY, h:mm:ss a');
 var hourDisplay = $('.hour').valueOf();
 var saveButtonEl =$('.saveBtn');
@@ -15,33 +15,33 @@ var currentDayEl = document.createElement('p');
 
 //display the color based on past, present or future    
 $('.time-block').each(function() {
-    var timeBlock = $('time-block');
+    var timeBlock = $('.time-block');
     console.log(hourDisplay);
     
-    if (hourDisplay === hours) {
+    if (parseInt(hourDisplay) === hours) {
         timeBlock.classList.add('present');
         
     }
-    else if (hourDisplay.value < hours) {
+    else if (parseInt(hourDisplay) < hours) {
         timeBlock.classList.add('past');
     }
-    else if(hourDisplay.value > hours) { 
+    else if (parseInt(hourDisplay) > hours) { 
         timeBlock.classList.add('future');
     }
 });
 
  
 
-saveButtonEl.on('click', function(event) {
-    event.preventDefault();
-});   
+//saveButtonEl.on('click', function(event) {
+  //  event.preventDefault();
+//});   
   // create user object from input
-  var taskText = {
-    taskText: eventDescription.value.trim(),
+  //var taskText = {
+    //taskText: eventDescription.value.trim(),
     
-  };
+  //};
 
   // set new submission to local storage 
-  localStorage.setItem("taskText", JSON.stringify(taskText));
+  //localStorage.setItem("taskText", JSON.stringify(taskText));
   
 
