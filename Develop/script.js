@@ -2,7 +2,6 @@ var currentDay = $('#currentDay');
 var currentDayDisplay = moment().format('MMMM Do YYYY, h:mm:ss a');
 var hourDisplay = $('.hour').valueOf();
 var saveButtonEl =$('.saveBtn');
-var hours = moment().hours();
 var eventDescription = $('.description');
 
 
@@ -16,16 +15,20 @@ var currentDayEl = document.createElement('p');
 //display the color based on past, present or future    
 $('.time-block').each(function() {
     var timeBlock = $('.time-block');
-    console.log(hourDisplay);
+    var dataTime =$(this).attr("data-time");
+    console.log(dataTime);
+
+    var hours = moment().hours();
+   
     
-    if (parseInt(hourDisplay) === hours) {
+    if (dataTime === hours) {
         timeBlock.classList.add('present');
         
     }
-    else if (parseInt(hourDisplay) < hours) {
+    else if (dataTime < hours) {
         timeBlock.classList.add('past');
     }
-    else if (parseInt(hourDisplay) > hours) { 
+    else if (dataTime > hours) { 
         timeBlock.classList.add('future');
     }
 });
