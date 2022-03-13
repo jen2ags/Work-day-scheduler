@@ -43,7 +43,17 @@ function store() {
 
 saveButtonEl.on('click', store);
 
-function getStoredItem () {
-    var storedTask = localStorage.getItem(time);
-    $('.description').innerHTML = storedTask;
-}
+var getStoredItem =function() {
+$('#8').text(localStorage.getItem('8'));
+$('#9').text(localStorage.getItem('9'));
+$('#10').text(localStorage.getItem('10'));
+$('#11').text(localStorage.getItem('11'));
+$('#12').text(localStorage.getItem('12'));
+$('#13').text(localStorage.getItem('13'));
+$('#14').text(localStorage.getItem('14'));
+$('#15').text(localStorage.getItem('15'));
+$('#16').text(localStorage.getItem('16'));
+$('#17').text(localStorage.getItem('17'));
+};
+
+getStoredItem();
