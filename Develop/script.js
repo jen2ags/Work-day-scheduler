@@ -18,7 +18,7 @@ $('.description').each(function() {
     var dataTime =parseInt($(this).attr("data-time"));
 
     
-
+//if the time is equal, greater or less than the dataTime, the corresponding colors will display
     var hours = moment().hours();
     console.log(dataTime, hours);
     
@@ -34,15 +34,18 @@ $('.description').each(function() {
     }
 }); 
 
+//values and time will be stored in localStorage
 function store() {
     var value = $(this).siblings('.description').val();
         var time = $(this).siblings('.description').attr('data-time');
         localStorage.setItem(time, value);
 
 }
-
+//button to save the items into localStorage when clicked
 saveButtonEl.on('click', store);
 
+
+//pull items from localStorage when the browser is refreshed
 var getStoredItem =function() {
 $('#8').text(localStorage.getItem('8'));
 $('#9').text(localStorage.getItem('9'));
