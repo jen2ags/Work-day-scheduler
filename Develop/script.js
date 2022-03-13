@@ -14,7 +14,7 @@ var currentDayEl = document.createElement('p');
 
 //display the color based on past, present or future    
 $('.time-block').each(function() {
-    var timeBlock = $('.time-block');
+    var timeBlock = $(this);
     var dataTime =$(this).attr("data-time");
     console.log(dataTime);
 
@@ -22,14 +22,14 @@ $('.time-block').each(function() {
    
     
     if (dataTime === hours) {
-        timeBlock.classList.add('present');
+        timeBlock.addClass('present');
         
     }
     else if (dataTime < hours) {
-        timeBlock.classList.add('past');
+        timeBlock.addClass('past');
     }
     else if (dataTime > hours) { 
-        timeBlock.classList.add('future');
+        timeBlock.addClass('future');
     }
 });
 
