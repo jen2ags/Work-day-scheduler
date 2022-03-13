@@ -1,7 +1,7 @@
 # Work-day-scheduler
 
 ## Purpose
-To quiz the users knowledge of javaScript using multiple choice selections. The user will get feedback at the end of the quiz with their score and can input their initials. The user will be penalized by 10 seconds if they select an incorrect answer.
+To provide a scheduler for the work day. The user will be able to input tasks to be completed at a specific time and save these tasks so that if they come back to the page and reload, the task will still be saved to their scheduler. The scheduler will also display colors depending on the time of day and if that time on the scheduler is in the past, present or future.
 
 ## Built With
 *HTML
@@ -14,7 +14,7 @@ To quiz the users knowledge of javaScript using multiple choice selections. The 
 https://jen2ags.github.io/Work-day-scheduler/
 
 ## Screen Shot
-
+![Screenshot Work day Scheduler](assets\images\scheduler-preview.png)
 
 
 ## Contribution
