@@ -11,7 +11,7 @@ var currentDayEl = document.createElement('p');
     currentDayEl.textContent = currentDayDisplay; 
     currentDay.append(currentDayDisplay);
 
-function timeBlock() {
+function colorDisplay() {
     
     if (hourDisplay === hours) {
         console.log('present');
